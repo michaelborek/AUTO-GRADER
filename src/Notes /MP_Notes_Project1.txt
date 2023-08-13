@@ -1,0 +1,47 @@
+
+project1.py
+
+- Add Comments for Documentation via pydoc
+Done
+
+- Add "opening text to prompt user to add number" and variable 'player_guess' as type(str)
+Done
+
+Line 4. Change 'count' to 'guess_counter'
+Done on line 43
+
+Line 5. Change 'max' to 'maximum_ guesses'
+Done on line 4 in Class!
+
+Line 6. Change 'secret_guess' to 'secret_number'
+Done on line 5 in Class
+
+Line 9. Change 'playerguess' to 'player_number'
+Done on line 48
+
+Line 22. Add an stdout for what the secret number was
+Done on line 64
+
+
+
+project1_test.py
+
+- Change format of comments to match pydocs e.g., markdown
+Done
+
+- change hardcoded list to dataclass; example...
+
+	from dataclasses import dataclass
+
+	@dataclass
+	class MockInput:
+
+    		test_input_list: list =['50', '50', '50', '50', '50', '50', '50']
+Done only one error; because this is the list I had to put default_factory
+
+
+
+- change multiple functions to one test function with multiple assert statements
+Done
+
+Project 1 with pytest is fully completed!
