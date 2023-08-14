@@ -45,13 +45,7 @@ To grade a student's assignment:
 
 
 ```bash
-python autograder.py -f <path_to_student_code>
-```
-
-For more detailed usage and options, refer to the built-in help:
-
-```bash
-python autograder.py --help
+pytest project<number_of_the_test>_test.py
 ```
 
 ### Example Code Assignments
@@ -70,6 +64,5 @@ Distributed under the MIT License. See LICENSE for more information.
 ### Contact
 Michael Borek
 
-GitHub: michaelborek
-
-Email: borekmi1@msu.edu
+- GitHub: michaelborek
+- Email: borekmi1@msu.edu
