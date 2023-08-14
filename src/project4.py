@@ -21,11 +21,7 @@ def NumGuess():
     ----------
     None
 
-    Returns
-    -------
-    None
-
-    User Interaction
+    Notes
     ----------------
     Asks the user to guess a number between 0 and 99.
 
@@ -34,6 +30,10 @@ def NumGuess():
     If the guessed number is equal to the secret number, it prints 'Correct' and the game ends.
 
     If all guesses are exhausted, it reveals the secret number and ends the game.
+
+    Returns
+    -------
+    None
     """
     games_rules = project1.GamesRules() # Creates an instance of the GamesRules class
 
@@ -75,11 +75,7 @@ def RPSLS():
     ----------
     None
 
-    Returns
-    -------
-    None
-
-    User Interaction
+    Notes
     ----------------
     The game prompts the user to pick a number between 1 and 5, where each number corresponds to an option 
     (rock, paper, scissors, lizard, or spock).
@@ -88,6 +84,10 @@ def RPSLS():
     - 'You win' if the player's choice beats the computer's.
     - 'You lose' if the computer's choice beats the player's.
     - 'Tie' if both the player and the computer make the same choice.
+    
+    Returns
+    -------
+    None   
     """
     game = project2.GamesRules() # Creates an instance of the GamesRules class
 
@@ -123,11 +123,7 @@ def QuizGame():
     ----------
     None
 
-    Returns
-    -------
-    None
-
-    User Interaction
+    Notes
     ----------------
     The game prompts the user to select an answer between 1 and 5, where each number corresponds to 
     a different answer option.
@@ -136,12 +132,16 @@ def QuizGame():
     - 'You are correct' if the player's choice has the highest percentage.
     - 'You are incorrect' if the player's choice doesn't have the highest percentage.
 
-    File Interaction
+    Caution
     ----------------
     The game interacts with a data file 'data.txt' which is expected to be in the same directory. This 
     file is assumed to contain a bank of questions, with each question having multiple answers, 
     each with their respective popularity percentage. Each question and its answers are expected 
     to be on a new line in the data file.
+
+    Returns
+    -------
+    None    
     """
     games_rules = project3.GamesRules()  # Creates an instance of the GamesRules class
 

@@ -47,11 +47,7 @@ def main():
     ----------
     None
 
-    Returns
-    -------
-    None
-
-    User Interaction
+    Notes
     ----------------
     Asks the user to guess a number between 0 and 99.
 
@@ -60,6 +56,10 @@ def main():
     If the guessed number is equal to the secret number, it prints 'Correct' and the game ends.
 
     If all guesses are exhausted, it reveals the secret number and ends the game.
+
+    Returns
+    -------
+    None
     """
     games_rules = GamesRules() # Creates an instance of the GamesRules class
 
