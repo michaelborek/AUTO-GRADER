@@ -70,11 +70,7 @@ def main():
     ----------
     None
 
-    Returns
-    -------
-    None
-
-    User Interaction
+    Notes
     ----------------
     The game prompts the user to pick a number between 1 and 5, where each number corresponds to an option 
     (rock, paper, scissors, lizard, or spock).
@@ -83,6 +79,10 @@ def main():
     - 'You win' if the player's choice beats the computer's.
     - 'You lose' if the computer's choice beats the player's.
     - 'Tie' if both the player and the computer make the same choice.
+    
+    Returns
+    -------
+    None   
     """
     game = GamesRules() # Creates an instance of the GamesRules class
 

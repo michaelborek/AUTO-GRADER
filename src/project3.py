@@ -42,11 +42,7 @@ def main():
     ----------
     None
 
-    Returns
-    -------
-    None
-
-    User Interaction
+    Notes
     ----------------
     The game prompts the user to select an answer between 1 and 5, where each number corresponds to 
     a different answer option.
@@ -55,12 +51,16 @@ def main():
     - 'You are correct' if the player's choice has the highest percentage.
     - 'You are incorrect' if the player's choice doesn't have the highest percentage.
 
-    File Interaction
+    Caution
     ----------------
     The game interacts with a data file 'data.txt' which is expected to be in the same directory. This 
     file is assumed to contain a bank of questions, with each question having multiple answers, 
     each with their respective popularity percentage. Each question and its answers are expected 
     to be on a new line in the data file.
+
+    Returns
+    -------
+    None    
     """
     games_rules = GamesRules()  # Creates an instance of the GamesRules class
 
