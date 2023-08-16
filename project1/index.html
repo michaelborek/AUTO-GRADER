@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 1 Documentation &mdash; AUTO-GRADER 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Project 2 Documentation" href="../project2/index.html" />
+    <link rel="prev" title="Welcome to Michal Borek’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AUTO-GRADER
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Project 1 Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-project1">Module Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project1.GamesRules"><code class="docutils literal notranslate"><span class="pre">GamesRules</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project1.GamesRules.maximum_guesses"><code class="docutils literal notranslate"><span class="pre">GamesRules.maximum_guesses</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project1.GamesRules.secret_number"><code class="docutils literal notranslate"><span class="pre">GamesRules.secret_number</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#project1.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-project1_test">Test Module Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project1_test.MockInput"><code class="docutils literal notranslate"><span class="pre">MockInput</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project1_test.MockInput.test_input_list_1"><code class="docutils literal notranslate"><span class="pre">MockInput.test_input_list_1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project1_test.MockInput.test_input_list_2"><code class="docutils literal notranslate"><span class="pre">MockInput.test_input_list_2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project1_test.MockInput.test_input_list_3"><code class="docutils literal notranslate"><span class="pre">MockInput.test_input_list_3</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#project1_test.MockRandom"><code class="docutils literal notranslate"><span class="pre">MockRandom</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project1_test.MockRandom.test_random_number_1"><code class="docutils literal notranslate"><span class="pre">MockRandom.test_random_number_1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project1_test.MockRandom.test_random_number_2"><code class="docutils literal notranslate"><span class="pre">MockRandom.test_random_number_2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project1_test.MockRandom.test_random_number_3"><code class="docutils literal notranslate"><span class="pre">MockRandom.test_random_number_3</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#project1_test.test_game_lost_scenario"><code class="docutils literal notranslate"><span class="pre">test_game_lost_scenario()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project1_test.test_game_won_scenario"><code class="docutils literal notranslate"><span class="pre">test_game_won_scenario()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project1_test.test_secret_number_range"><code class="docutils literal notranslate"><span class="pre">test_secret_number_range()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project2/index.html">Project 2 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project3/index.html">Project 3 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project4/index.html">Project 4 Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AUTO-GRADER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Project 1 Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/project1/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="project-1-documentation">
+<h1>Project 1 Documentation<a class="headerlink" href="#project-1-documentation" title="Permalink to this heading"></a></h1>
+<section id="module-project1">
+<span id="module-documentation"></span><h2>Module Documentation<a class="headerlink" href="#module-project1" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="project1.GamesRules">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project1.</span></span><span class="sig-name descname"><span class="pre">GamesRules</span></span><a class="reference internal" href="../_modules/project1.html#GamesRules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project1.GamesRules" title="Permalink to this definition"></a></dt>
+<dd><p>Represents the game’s rule set with a randomly generated secret number.</p>
+<p>This class provides a defined number of maximum guesses allowed and
+randomly determines a secret number for gameplay.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project1.GamesRules.maximum_guesses">
+<span class="sig-name descname"><span class="pre">maximum_guesses</span></span><a class="headerlink" href="#project1.GamesRules.maximum_guesses" title="Permalink to this definition"></a></dt>
+<dd><p>The maximum number of allowed guesses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project1.GamesRules.secret_number">
+<span class="sig-name descname"><span class="pre">secret_number</span></span><a class="headerlink" href="#project1.GamesRules.secret_number" title="Permalink to this definition"></a></dt>
+<dd><p>A randomly generated number between 0 and 99 that the player has to guess.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__():</span></span></dt>
+<dd><p>Initialize a new instance, generating a secret number for gameplay.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project1.main">
+<span class="sig-prename descclassname"><span class="pre">project1.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project1.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project1.main" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the logic of the NumGame.</p>
+<p>In this game, the player is asked to guess a secret number that is randomly selected
+between 0 and 99 (inclusive). For each guess made by the player, the game provides feedback,
+informing the player if the secret number is ‘Higher’ or ‘Lower’ than the number guessed.</p>
+<p>The player is allowed a maximum of 6 guesses to identify the secret number. The game ends
+either when the player has successfully guessed the secret number or when the player has
+exhausted all of their available guesses.</p>
+<p>The game uses the <cite>random.randint</cite> function from the <cite>random</cite> module to generate the secret number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Asks the user to guess a number between 0 and 99.</p>
+<p>If the guessed number is less than the secret number, it prints ‘Higher’ and the number of remaining guesses.
+If the guessed number is greater than the secret number, it prints ‘Lower’ and the number of remaining guesses.
+If the guessed number is equal to the secret number, it prints ‘Correct’ and the game ends.</p>
+<p>If all guesses are exhausted, it reveals the secret number and ends the game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-project1_test">
+<span id="test-module-documentation"></span><h2>Test Module Documentation<a class="headerlink" href="#module-project1_test" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="project1_test.MockInput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project1_test.</span></span><span class="sig-name descname"><span class="pre">MockInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_input_list_1:</span> <span class="pre">list</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_input_list_2:</span> <span class="pre">list</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_input_list_3:</span> <span class="pre">list</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project1_test.html#MockInput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project1_test.MockInput" title="Permalink to this definition"></a></dt>
+<dd><p>A utility data class for mocking user input during testing.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project1_test.MockInput.test_input_list_1">
+<span class="sig-name descname"><span class="pre">test_input_list_1</span></span><a class="headerlink" href="#project1_test.MockInput.test_input_list_1" title="Permalink to this definition"></a></dt>
+<dd><p>A list of test inputs to simulate player guesses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project1_test.MockInput.test_input_list_2">
+<span class="sig-name descname"><span class="pre">test_input_list_2</span></span><a class="headerlink" href="#project1_test.MockInput.test_input_list_2" title="Permalink to this definition"></a></dt>
+<dd><p>A different set of test inputs to simulate player guesses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project1_test.MockInput.test_input_list_3">
+<span class="sig-name descname"><span class="pre">test_input_list_3</span></span><a class="headerlink" href="#project1_test.MockInput.test_input_list_3" title="Permalink to this definition"></a></dt>
+<dd><p>Another set of test inputs to simulate player guesses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="project1_test.MockRandom">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project1_test.</span></span><span class="sig-name descname"><span class="pre">MockRandom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_random_number_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">70</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_random_number_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">85</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_random_number_3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">90</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project1_test.html#MockRandom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project1_test.MockRandom" title="Permalink to this definition"></a></dt>
+<dd><p>A utility class for mocking random number generation during testing.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project1_test.MockRandom.test_random_number_1">
+<span class="sig-name descname"><span class="pre">test_random_number_1</span></span><a class="headerlink" href="#project1_test.MockRandom.test_random_number_1" title="Permalink to this definition"></a></dt>
+<dd><p>A predetermined test random number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project1_test.MockRandom.test_random_number_2">
+<span class="sig-name descname"><span class="pre">test_random_number_2</span></span><a class="headerlink" href="#project1_test.MockRandom.test_random_number_2" title="Permalink to this definition"></a></dt>
+<dd><p>Another predetermined test random number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project1_test.MockRandom.test_random_number_3">
+<span class="sig-name descname"><span class="pre">test_random_number_3</span></span><a class="headerlink" href="#project1_test.MockRandom.test_random_number_3" title="Permalink to this definition"></a></dt>
+<dd><p>Another predetermined test random number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project1_test.test_game_lost_scenario">
+<span class="sig-prename descclassname"><span class="pre">project1_test.</span></span><span class="sig-name descname"><span class="pre">test_game_lost_scenario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mocker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capfd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project1_test.html#test_game_lost_scenario"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project1_test.test_game_lost_scenario" title="Permalink to this definition"></a></dt>
+<dd><p>Verify the game’s behavior and outputs when the player loses.</p>
+<p>The test ensures that the game provides appropriate feedback messages when the player fails to guess the secret number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mocker</strong> (<em>pytest.fixture</em>) – Fixture for mocking functions.</p></li>
+<li><p><strong>capfd</strong> (<em>pytest.fixture</em>) – Fixture to capture stdout and stderr for assertions.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project1_test.test_game_won_scenario">
+<span class="sig-prename descclassname"><span class="pre">project1_test.</span></span><span class="sig-name descname"><span class="pre">test_game_won_scenario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mocker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capfd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project1_test.html#test_game_won_scenario"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project1_test.test_game_won_scenario" title="Permalink to this definition"></a></dt>
+<dd><p>Verify the game’s behavior and outputs when the player wins.</p>
+<p>The test checks for the game’s feedback on correct guesses and provides feedback on the number of remaining guesses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mocker</strong> (<em>pytest.fixture</em>) – Fixture for mocking functions.</p></li>
+<li><p><strong>capfd</strong> (<em>pytest.fixture</em>) – Fixture to capture stdout and stderr for assertions.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project1_test.test_secret_number_range">
+<span class="sig-prename descclassname"><span class="pre">project1_test.</span></span><span class="sig-name descname"><span class="pre">test_secret_number_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mocker</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project1_test.html#test_secret_number_range"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project1_test.test_secret_number_range" title="Permalink to this definition"></a></dt>
+<dd><p>Test the range of the secret number generated by the game.</p>
+<p>The function asserts that the generated secret number is within the range of 0 to 99.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mocker</strong> (<em>pytest.fixture</em>) – Fixture for mocking functions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to Michal Borek’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../project2/index.html" class="btn btn-neutral float-right" title="Project 2 Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Michal Borek.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

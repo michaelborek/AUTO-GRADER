@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 3 Documentation &mdash; AUTO-GRADER 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Project 4 Documentation" href="../project4/index.html" />
+    <link rel="prev" title="Project 2 Documentation" href="../project2/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AUTO-GRADER
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../project1/index.html">Project 1 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project2/index.html">Project 2 Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Project 3 Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-project3">Module Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project3.GamesRules"><code class="docutils literal notranslate"><span class="pre">GamesRules</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project3.GamesRules.rand_int"><code class="docutils literal notranslate"><span class="pre">GamesRules.rand_int</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#project3.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-project3_test">Test Module Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project3_test.MockInput"><code class="docutils literal notranslate"><span class="pre">MockInput</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project3_test.MockInput.test_input_1"><code class="docutils literal notranslate"><span class="pre">MockInput.test_input_1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project3_test.MockInput.test_input_2"><code class="docutils literal notranslate"><span class="pre">MockInput.test_input_2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project3_test.MockInput.test_input_3"><code class="docutils literal notranslate"><span class="pre">MockInput.test_input_3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project3_test.MockInput.test_input_4"><code class="docutils literal notranslate"><span class="pre">MockInput.test_input_4</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#project3_test.MockRandomQuestions"><code class="docutils literal notranslate"><span class="pre">MockRandomQuestions</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project3_test.MockRandomQuestions.test_question_1"><code class="docutils literal notranslate"><span class="pre">MockRandomQuestions.test_question_1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project3_test.MockRandomQuestions.test_question_2"><code class="docutils literal notranslate"><span class="pre">MockRandomQuestions.test_question_2</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project3_test.MockRandomQuestions.test_question_3"><code class="docutils literal notranslate"><span class="pre">MockRandomQuestions.test_question_3</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project3_test.MockRandomQuestions.test_question_4"><code class="docutils literal notranslate"><span class="pre">MockRandomQuestions.test_question_4</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#project3_test.MockSeed"><code class="docutils literal notranslate"><span class="pre">MockSeed</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project3_test.MockSeed.test_seed_1"><code class="docutils literal notranslate"><span class="pre">MockSeed.test_seed_1</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#project3_test.test_computer_guess"><code class="docutils literal notranslate"><span class="pre">test_computer_guess()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project3_test.test_random_shuffle"><code class="docutils literal notranslate"><span class="pre">test_random_shuffle()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project4/index.html">Project 4 Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AUTO-GRADER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Project 3 Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/project3/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="project-3-documentation">
+<h1>Project 3 Documentation<a class="headerlink" href="#project-3-documentation" title="Permalink to this heading"></a></h1>
+<section id="module-project3">
+<span id="module-documentation"></span><h2>Module Documentation<a class="headerlink" href="#module-project3" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="project3.GamesRules">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project3.</span></span><span class="sig-name descname"><span class="pre">GamesRules</span></span><a class="reference internal" href="../_modules/project3.html#GamesRules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project3.GamesRules" title="Permalink to this definition"></a></dt>
+<dd><p>Represents a game rule set with a randomly determined integer value.</p>
+<p>This class initializes a random number from a predefined interval, which can be
+used in the gameplay or game’s logic.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project3.GamesRules.rand_int">
+<span class="sig-name descname"><span class="pre">rand_int</span></span><a class="headerlink" href="#project3.GamesRules.rand_int" title="Permalink to this definition"></a></dt>
+<dd><p>A random number chosen from the interval [1, 1049].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__():</span></span></dt>
+<dd><p>Initialize a new instance, generating a random integer for gameplay.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project3.main">
+<span class="sig-prename descclassname"><span class="pre">project3.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project3.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project3.main" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the logic of the QuizGame.</p>
+<p>The game reads a question bank from a data file, where each question has multiple answers with
+their respective percentages. The computer randomly selects a question from the bank. The player
+is then presented with five answers in a random order and has to pick one. The game provides
+feedback, indicating whether the player selected the most popular answer and its percentage.</p>
+<p>The game uses the <cite>random.randint</cite> function from the <cite>random</cite> module to select a random question
+from the question bank.</p>
+<p>It also uses the built-in <cite>open</cite> function to read the data file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The game prompts the user to select an answer between 1 and 5, where each number corresponds to
+a different answer option.</p>
+<p>Depending on the player’s choice and the popularity of the selected answer, the game will announce the results:
+- ‘You are correct’ if the player’s choice has the highest percentage.
+- ‘You are incorrect’ if the player’s choice doesn’t have the highest percentage.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The game interacts with a data file ‘data.txt’ which is expected to be in the same directory. This
+file is assumed to contain a bank of questions, with each question having multiple answers,
+each with their respective popularity percentage. Each question and its answers are expected
+to be on a new line in the data file.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-project3_test">
+<span id="test-module-documentation"></span><h2>Test Module Documentation<a class="headerlink" href="#module-project3_test" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="project3_test.MockInput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project3_test.</span></span><span class="sig-name descname"><span class="pre">MockInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_input_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_input_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_input_3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'1'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_input_4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'5'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project3_test.html#MockInput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project3_test.MockInput" title="Permalink to this definition"></a></dt>
+<dd><p>A utility data class for mocking user input during testing.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project3_test.MockInput.test_input_1">
+<span class="sig-name descname"><span class="pre">test_input_1</span></span><a class="headerlink" href="#project3_test.MockInput.test_input_1" title="Permalink to this definition"></a></dt>
+<dd><p>Mocked input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project3_test.MockInput.test_input_2">
+<span class="sig-name descname"><span class="pre">test_input_2</span></span><a class="headerlink" href="#project3_test.MockInput.test_input_2" title="Permalink to this definition"></a></dt>
+<dd><p>Another mocked input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project3_test.MockInput.test_input_3">
+<span class="sig-name descname"><span class="pre">test_input_3</span></span><a class="headerlink" href="#project3_test.MockInput.test_input_3" title="Permalink to this definition"></a></dt>
+<dd><p>Another mocked input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project3_test.MockInput.test_input_4">
+<span class="sig-name descname"><span class="pre">test_input_4</span></span><a class="headerlink" href="#project3_test.MockInput.test_input_4" title="Permalink to this definition"></a></dt>
+<dd><p>Another mocked input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="project3_test.MockRandomQuestions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project3_test.</span></span><span class="sig-name descname"><span class="pre">MockRandomQuestions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_question_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_question_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">300</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_question_3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">942</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_question_4</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">942</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project3_test.html#MockRandomQuestions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project3_test.MockRandomQuestions" title="Permalink to this definition"></a></dt>
+<dd><p>A utility data class for mocking random questions during testing.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project3_test.MockRandomQuestions.test_question_1">
+<span class="sig-name descname"><span class="pre">test_question_1</span></span><a class="headerlink" href="#project3_test.MockRandomQuestions.test_question_1" title="Permalink to this definition"></a></dt>
+<dd><p>A predetermined random question.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project3_test.MockRandomQuestions.test_question_2">
+<span class="sig-name descname"><span class="pre">test_question_2</span></span><a class="headerlink" href="#project3_test.MockRandomQuestions.test_question_2" title="Permalink to this definition"></a></dt>
+<dd><p>Another predetermined random question.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project3_test.MockRandomQuestions.test_question_3">
+<span class="sig-name descname"><span class="pre">test_question_3</span></span><a class="headerlink" href="#project3_test.MockRandomQuestions.test_question_3" title="Permalink to this definition"></a></dt>
+<dd><p>Another predetermined random question.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project3_test.MockRandomQuestions.test_question_4">
+<span class="sig-name descname"><span class="pre">test_question_4</span></span><a class="headerlink" href="#project3_test.MockRandomQuestions.test_question_4" title="Permalink to this definition"></a></dt>
+<dd><p>Another predetermined random question.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="project3_test.MockSeed">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project3_test.</span></span><span class="sig-name descname"><span class="pre">MockSeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_seed_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">200</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project3_test.html#MockSeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project3_test.MockSeed" title="Permalink to this definition"></a></dt>
+<dd><p>A utility data class for mocking random seeds during testing.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project3_test.MockSeed.test_seed_1">
+<span class="sig-name descname"><span class="pre">test_seed_1</span></span><a class="headerlink" href="#project3_test.MockSeed.test_seed_1" title="Permalink to this definition"></a></dt>
+<dd><p>Mocked seed value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project3_test.test_computer_guess">
+<span class="sig-prename descclassname"><span class="pre">project3_test.</span></span><span class="sig-name descname"><span class="pre">test_computer_guess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mocker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capfd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project3_test.html#test_computer_guess"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project3_test.test_computer_guess" title="Permalink to this definition"></a></dt>
+<dd><p>Test the Quiz game’s workflow and correctness from <cite>project3.py</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mocker</strong> (<em>fixture</em>) – A pytest fixture for mocking. Used to mock <cite>input</cite> and <cite>random.randint</cite>.</p></li>
+<li><p><strong>capfd</strong> (<em>fixture</em>) – A pytest fixture to capture stdout and stderr.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project3_test.test_random_shuffle">
+<span class="sig-prename descclassname"><span class="pre">project3_test.</span></span><span class="sig-name descname"><span class="pre">test_random_shuffle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mocker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capfd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project3_test.html#test_random_shuffle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project3_test.test_random_shuffle" title="Permalink to this definition"></a></dt>
+<dd><p>Test to check if the game shuffles the answers correctly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mocker</strong> (<em>fixture</em>) – A pytest fixture for mocking. Used to mock <cite>input</cite> and <cite>random.randint</cite>.</p></li>
+<li><p><strong>capfd</strong> (<em>fixture</em>) – A pytest fixture to capture stdout and stderr.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../project2/index.html" class="btn btn-neutral float-left" title="Project 2 Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../project4/index.html" class="btn btn-neutral float-right" title="Project 4 Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Michal Borek.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

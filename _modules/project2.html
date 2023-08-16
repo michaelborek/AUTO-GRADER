@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>project2 &mdash; AUTO-GRADER 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AUTO-GRADER
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../project1/index.html">Project 1 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project2/index.html">Project 2 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project3/index.html">Project 3 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project4/index.html">Project 4 Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AUTO-GRADER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">project2</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for project2</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<div class="viewcode-block" id="GamesRules"><a class="viewcode-back" href="../project2/index.html#project2.GamesRules">[docs]</a><span class="k">class</span> <span class="nc">GamesRules</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents the game logic and rules for Rock Paper Scissors Lizard Spock (RPSLS).</span>
+
+<span class="sd">    This class provides mappings for game options to their respective numbers, as well as </span>
+<span class="sd">    the rules that determine the winner based on the chosen options.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    RPSLS_dict : dict of {int: str}</span>
+<span class="sd">        A mapping of integers (1-5) to their corresponding game options.</span>
+<span class="sd">    RPSLS_rules_dict : dict of {str: dict}</span>
+<span class="sd">        Rules that define which option defeats which in a dictionary format. </span>
+<span class="sd">        For example, &#39;rock&#39; key has a dictionary value showing it &#39;crushes&#39; &#39;lizard&#39; and &#39;scissors&#39;.</span>
+<span class="sd">    computer_guess : int</span>
+<span class="sd">        A random integer between 1 and 5, representing the computer&#39;s game option guess.</span>
+<span class="sd">    computer_guess_name : str</span>
+<span class="sd">        The textual representation (name) of the game option that the computer guessed.</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    __init__():</span>
+<span class="sd">        Initialize a new instance, setting computer&#39;s guess and its name.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">RPSLS_dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;rock&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;paper&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;scissors&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;lizard&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;spock&#39;</span><span class="p">}</span>
+
+    <span class="n">RPSLS_rules_dict</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;rock&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;lizard&quot;</span><span class="p">:</span> <span class="s2">&quot;crushes&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;scissors&quot;</span><span class="p">:</span> <span class="s2">&quot;crushes&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;paper&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;rock&quot;</span><span class="p">:</span> <span class="s2">&quot;covers&quot;</span><span class="p">,</span>
+            <span class="s1">&#39;spock&#39;</span><span class="p">:</span> <span class="s2">&quot;disproves&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;scissors&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;paper&quot;</span><span class="p">:</span> <span class="s2">&quot;cuts&quot;</span><span class="p">,</span>
+            <span class="s1">&#39;lizard&#39;</span><span class="p">:</span> <span class="s2">&quot;decapitates&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;lizard&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;spock&quot;</span><span class="p">:</span> <span class="s2">&quot;poisons&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;paper&quot;</span><span class="p">:</span> <span class="s2">&quot;eats&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;spock&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;scissors&quot;</span><span class="p">:</span> <span class="s2">&quot;smashes&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;rock&quot;</span><span class="p">:</span> <span class="s2">&quot;vaporizes&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructs a new GamesRules instance and sets the computer&#39;s guess and its corresponding name.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">computer_guess</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">computer_guess_name</span> <span class="o">=</span> <span class="n">GamesRules</span><span class="o">.</span><span class="n">RPSLS_dict</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">computer_guess</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../project2/index.html#project2.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Implements the logic of the RPSLS (Rock Paper Scissors Lizard Spock) game.</span>
+
+<span class="sd">    In this game, the player is asked to pick a number between 1 and 5 (inclusive), each corresponding to a</span>
+<span class="sd">    choice of rock, paper, scissors, lizard, or spock. The computer also randomly selects a number, and a game</span>
+<span class="sd">    between the computer-generated and player-generated numbers is played. The game provides feedback, indicating</span>
+<span class="sd">    whether the player won or lost, or if it&#39;s a tie.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    None</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    ----------------</span>
+<span class="sd">    The game prompts the user to pick a number between 1 and 5, where each number corresponds to an option </span>
+<span class="sd">    (rock, paper, scissors, lizard, or spock).</span>
+
+<span class="sd">    Depending on the player&#39;s and the computer&#39;s choices, the game will announce the results:</span>
+<span class="sd">    - &#39;You win&#39; if the player&#39;s choice beats the computer&#39;s.</span>
+<span class="sd">    - &#39;You lose&#39; if the computer&#39;s choice beats the player&#39;s.</span>
+<span class="sd">    - &#39;Tie&#39; if both the player and the computer make the same choice.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None   </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">game</span> <span class="o">=</span> <span class="n">GamesRules</span><span class="p">()</span> <span class="c1"># Creates an instance of the GamesRules class</span>
+
+    <span class="n">player_guess_str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter your guess (1 for rock, 2 for paper, 3 for scissors, 4 for lizard, 5 for spock): &#39;</span><span class="p">)</span> <span class="c1"># Player&#39;s choice</span>
+    <span class="n">player_guess_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player_guess_str</span><span class="p">)</span> <span class="c1"># Converts the player&#39;s guess to an integer</span>
+    <span class="n">player_guess_name</span> <span class="o">=</span> <span class="n">game</span><span class="o">.</span><span class="n">RPSLS_dict</span><span class="p">[</span><span class="n">player_guess_int</span><span class="p">]</span> <span class="c1"># Chooses name from the dict</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;I guessed </span><span class="si">{</span><span class="n">game</span><span class="o">.</span><span class="n">computer_guess_name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Prints tense with computers pick</span>
+
+    <span class="c1"># If-else statements to check if the player&#39;s guess is higher, lower or equal to the secret number</span>
+    <span class="k">if</span> <span class="n">player_guess_name</span> <span class="o">==</span> <span class="n">game</span><span class="o">.</span><span class="n">computer_guess_name</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Tie! We both guessed </span><span class="si">{</span><span class="n">player_guess_name</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span> <span class="c1"># Tie logic information</span>
+    <span class="k">elif</span> <span class="n">player_guess_name</span> <span class="ow">in</span> <span class="n">game</span><span class="o">.</span><span class="n">RPSLS_rules_dict</span><span class="p">[</span><span class="n">game</span><span class="o">.</span><span class="n">computer_guess_name</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You lose because </span><span class="si">{</span><span class="n">game</span><span class="o">.</span><span class="n">computer_guess_name</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">game</span><span class="o">.</span><span class="n">RPSLS_rules_dict</span><span class="p">[</span><span class="n">game</span><span class="o">.</span><span class="n">computer_guess_name</span><span class="p">][</span><span class="n">player_guess_name</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">player_guess_name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Prints &#39;You lose&#39; if the computer&#39;s choice beats the player&#39;s</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You win because </span><span class="si">{</span><span class="n">player_guess_name</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">game</span><span class="o">.</span><span class="n">RPSLS_rules_dict</span><span class="p">[</span><span class="n">player_guess_name</span><span class="p">][</span><span class="n">game</span><span class="o">.</span><span class="n">computer_guess_name</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">game</span><span class="o">.</span><span class="n">computer_guess_name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Prints &#39;You win&#39; if the player&#39;s choice beats the computer&#39;s</span></div>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Michal Borek.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

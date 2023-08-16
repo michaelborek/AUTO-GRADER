@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 2 Documentation &mdash; AUTO-GRADER 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Project 3 Documentation" href="../project3/index.html" />
+    <link rel="prev" title="Project 1 Documentation" href="../project1/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AUTO-GRADER
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../project1/index.html">Project 1 Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Project 2 Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-project2">Module Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project2.GamesRules"><code class="docutils literal notranslate"><span class="pre">GamesRules</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project2.GamesRules.RPSLS_dict"><code class="docutils literal notranslate"><span class="pre">GamesRules.RPSLS_dict</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project2.GamesRules.RPSLS_rules_dict"><code class="docutils literal notranslate"><span class="pre">GamesRules.RPSLS_rules_dict</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project2.GamesRules.computer_guess"><code class="docutils literal notranslate"><span class="pre">GamesRules.computer_guess</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#project2.GamesRules.computer_guess_name"><code class="docutils literal notranslate"><span class="pre">GamesRules.computer_guess_name</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#project2.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-project2_test">Test Module Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project2_test.MockInput"><code class="docutils literal notranslate"><span class="pre">MockInput</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project2_test.MockInput.test_some_input"><code class="docutils literal notranslate"><span class="pre">MockInput.test_some_input</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#project2_test.test_game_logic"><code class="docutils literal notranslate"><span class="pre">test_game_logic()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project2_test.test_game_output_messages"><code class="docutils literal notranslate"><span class="pre">test_game_output_messages()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project2_test.test_randomness_of_computer_guess"><code class="docutils literal notranslate"><span class="pre">test_randomness_of_computer_guess()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project3/index.html">Project 3 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project4/index.html">Project 4 Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AUTO-GRADER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Project 2 Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/project2/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="project-2-documentation">
+<h1>Project 2 Documentation<a class="headerlink" href="#project-2-documentation" title="Permalink to this heading"></a></h1>
+<section id="module-project2">
+<span id="module-documentation"></span><h2>Module Documentation<a class="headerlink" href="#module-project2" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="project2.GamesRules">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project2.</span></span><span class="sig-name descname"><span class="pre">GamesRules</span></span><a class="reference internal" href="../_modules/project2.html#GamesRules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project2.GamesRules" title="Permalink to this definition"></a></dt>
+<dd><p>Represents the game logic and rules for Rock Paper Scissors Lizard Spock (RPSLS).</p>
+<p>This class provides mappings for game options to their respective numbers, as well as
+the rules that determine the winner based on the chosen options.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project2.GamesRules.RPSLS_dict">
+<span class="sig-name descname"><span class="pre">RPSLS_dict</span></span><a class="headerlink" href="#project2.GamesRules.RPSLS_dict" title="Permalink to this definition"></a></dt>
+<dd><p>A mapping of integers (1-5) to their corresponding game options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict of {int: str}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project2.GamesRules.RPSLS_rules_dict">
+<span class="sig-name descname"><span class="pre">RPSLS_rules_dict</span></span><a class="headerlink" href="#project2.GamesRules.RPSLS_rules_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Rules that define which option defeats which in a dictionary format.
+For example, ‘rock’ key has a dictionary value showing it ‘crushes’ ‘lizard’ and ‘scissors’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict of {str: dict}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project2.GamesRules.computer_guess">
+<span class="sig-name descname"><span class="pre">computer_guess</span></span><a class="headerlink" href="#project2.GamesRules.computer_guess" title="Permalink to this definition"></a></dt>
+<dd><p>A random integer between 1 and 5, representing the computer’s game option guess.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project2.GamesRules.computer_guess_name">
+<span class="sig-name descname"><span class="pre">computer_guess_name</span></span><a class="headerlink" href="#project2.GamesRules.computer_guess_name" title="Permalink to this definition"></a></dt>
+<dd><p>The textual representation (name) of the game option that the computer guessed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__():</span></span></dt>
+<dd><p>Initialize a new instance, setting computer’s guess and its name.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project2.main">
+<span class="sig-prename descclassname"><span class="pre">project2.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project2.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project2.main" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the logic of the RPSLS (Rock Paper Scissors Lizard Spock) game.</p>
+<p>In this game, the player is asked to pick a number between 1 and 5 (inclusive), each corresponding to a
+choice of rock, paper, scissors, lizard, or spock. The computer also randomly selects a number, and a game
+between the computer-generated and player-generated numbers is played. The game provides feedback, indicating
+whether the player won or lost, or if it’s a tie.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The game prompts the user to pick a number between 1 and 5, where each number corresponds to an option
+(rock, paper, scissors, lizard, or spock).</p>
+<p>Depending on the player’s and the computer’s choices, the game will announce the results:
+- ‘You win’ if the player’s choice beats the computer’s.
+- ‘You lose’ if the computer’s choice beats the player’s.
+- ‘Tie’ if both the player and the computer make the same choice.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-project2_test">
+<span id="test-module-documentation"></span><h2>Test Module Documentation<a class="headerlink" href="#module-project2_test" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="project2_test.MockInput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project2_test.</span></span><span class="sig-name descname"><span class="pre">MockInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_some_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'1'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project2_test.html#MockInput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project2_test.MockInput" title="Permalink to this definition"></a></dt>
+<dd><p>A utility data class for mocking user input during testing.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project2_test.MockInput.test_some_input">
+<span class="sig-name descname"><span class="pre">test_some_input</span></span><a class="headerlink" href="#project2_test.MockInput.test_some_input" title="Permalink to this definition"></a></dt>
+<dd><p>Test case where player picks rock.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project2_test.test_game_logic">
+<span class="sig-prename descclassname"><span class="pre">project2_test.</span></span><span class="sig-name descname"><span class="pre">test_game_logic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mocker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capfd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project2_test.html#test_game_logic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project2_test.test_game_logic" title="Permalink to this definition"></a></dt>
+<dd><p>Test the game logic based on RPSLS rules.</p>
+<p>The function patches the input and random.randint functions from project2
+and checks the game’s logic for certain matchups.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project2_test.test_game_output_messages">
+<span class="sig-prename descclassname"><span class="pre">project2_test.</span></span><span class="sig-name descname"><span class="pre">test_game_output_messages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mocker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capfd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project2_test.html#test_game_output_messages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project2_test.test_game_output_messages" title="Permalink to this definition"></a></dt>
+<dd><p>Test the game’s output messages for various game outcomes.</p>
+<p>The function patches the input and random.randint functions from project2
+and checks the game’s output messages for each matchup in test_data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mocker</strong> (<em>object</em>) – The mock object used to replace real functions or methods with mock calls.</p></li>
+<li><p><strong>capfd</strong> (<em>object</em>) – Capture, as text, output to file descriptors 1 and 2.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The test checks if both the computer’s move and the game outcome message
+are correctly printed to the console.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project2_test.test_randomness_of_computer_guess">
+<span class="sig-prename descclassname"><span class="pre">project2_test.</span></span><span class="sig-name descname"><span class="pre">test_randomness_of_computer_guess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mocker</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project2_test.html#test_randomness_of_computer_guess"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project2_test.test_randomness_of_computer_guess" title="Permalink to this definition"></a></dt>
+<dd><p>Test the randomness of computer’s guess by checking a set of 1000 guesses.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../project1/index.html" class="btn btn-neutral float-left" title="Project 1 Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../project3/index.html" class="btn btn-neutral float-right" title="Project 3 Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Michal Borek.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

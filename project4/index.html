@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 4 Documentation &mdash; AUTO-GRADER 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Project 3 Documentation" href="../project3/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AUTO-GRADER
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../project1/index.html">Project 1 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project2/index.html">Project 2 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project3/index.html">Project 3 Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Project 4 Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-project4">Module Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project4.NumGuess"><code class="docutils literal notranslate"><span class="pre">NumGuess()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project4.QuizGame"><code class="docutils literal notranslate"><span class="pre">QuizGame()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project4.RPSLS"><code class="docutils literal notranslate"><span class="pre">RPSLS()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-project4_test">Test Module Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project4_test.test_fluency"><code class="docutils literal notranslate"><span class="pre">test_fluency()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project4_test.test_game_correctness"><code class="docutils literal notranslate"><span class="pre">test_game_correctness()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project4_test.test_input"><code class="docutils literal notranslate"><span class="pre">test_input()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AUTO-GRADER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Project 4 Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/project4/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="project-4-documentation">
+<h1>Project 4 Documentation<a class="headerlink" href="#project-4-documentation" title="Permalink to this heading"></a></h1>
+<section id="module-project4">
+<span id="module-documentation"></span><h2>Module Documentation<a class="headerlink" href="#module-project4" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="project4.NumGuess">
+<span class="sig-prename descclassname"><span class="pre">project4.</span></span><span class="sig-name descname"><span class="pre">NumGuess</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project4.html#NumGuess"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project4.NumGuess" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the logic of the NumGame.</p>
+<p>In this game, the player is asked to guess a secret number that is randomly selected
+between 0 and 99 (inclusive). For each guess made by the player, the game provides feedback,
+informing the player if the secret number is ‘Higher’ or ‘Lower’ than the number guessed.</p>
+<p>The player is allowed a maximum of 6 guesses to identify the secret number. The game ends
+either when the player has successfully guessed the secret number or when the player has
+exhausted all of their available guesses.</p>
+<p>The game uses the <cite>random.randint</cite> function from the <cite>random</cite> module to generate the secret number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Asks the user to guess a number between 0 and 99.</p>
+<p>If the guessed number is less than the secret number, it prints ‘Higher’ and the number of remaining guesses.
+If the guessed number is greater than the secret number, it prints ‘Lower’ and the number of remaining guesses.
+If the guessed number is equal to the secret number, it prints ‘Correct’ and the game ends.</p>
+<p>If all guesses are exhausted, it reveals the secret number and ends the game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project4.QuizGame">
+<span class="sig-prename descclassname"><span class="pre">project4.</span></span><span class="sig-name descname"><span class="pre">QuizGame</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project4.html#QuizGame"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project4.QuizGame" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the logic of the QuizGame.</p>
+<p>The game reads a question bank from a data file, where each question has multiple answers with
+their respective percentages. The computer randomly selects a question from the bank. The player
+is then presented with five answers in a random order and has to pick one. The game provides
+feedback, indicating whether the player selected the most popular answer and its percentage.</p>
+<p>The game uses the <cite>random.randint</cite> function from the <cite>random</cite> module to select a random question
+from the question bank.</p>
+<p>It also uses the built-in <cite>open</cite> function to read the data file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The game prompts the user to select an answer between 1 and 5, where each number corresponds to
+a different answer option.</p>
+<p>Depending on the player’s choice and the popularity of the selected answer, the game will announce the results:
+- ‘You are correct’ if the player’s choice has the highest percentage.
+- ‘You are incorrect’ if the player’s choice doesn’t have the highest percentage.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The game interacts with a data file ‘data.txt’ which is expected to be in the same directory. This
+file is assumed to contain a bank of questions, with each question having multiple answers,
+each with their respective popularity percentage. Each question and its answers are expected
+to be on a new line in the data file.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project4.RPSLS">
+<span class="sig-prename descclassname"><span class="pre">project4.</span></span><span class="sig-name descname"><span class="pre">RPSLS</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project4.html#RPSLS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project4.RPSLS" title="Permalink to this definition"></a></dt>
+<dd><p>Implements the logic of the RPSLS (Rock Paper Scissors Lizard Spock) game.</p>
+<p>In this game, the player is asked to pick a number between 1 and 5 (inclusive), each corresponding to a
+choice of rock, paper, scissors, lizard, or spock. The computer also randomly selects a number, and a game
+between the computer-generated and player-generated numbers is played. The game provides feedback, indicating
+whether the player won or lost, or if it’s a tie.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The game prompts the user to pick a number between 1 and 5, where each number corresponds to an option
+(rock, paper, scissors, lizard, or spock).</p>
+<p>Depending on the player’s and the computer’s choices, the game will announce the results:
+- ‘You win’ if the player’s choice beats the computer’s.
+- ‘You lose’ if the computer’s choice beats the player’s.
+- ‘Tie’ if both the player and the computer make the same choice.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-project4_test">
+<span id="test-module-documentation"></span><h2>Test Module Documentation<a class="headerlink" href="#module-project4_test" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="project4_test.test_fluency">
+<span class="sig-prename descclassname"><span class="pre">project4_test.</span></span><span class="sig-name descname"><span class="pre">test_fluency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mocker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capfd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project4_test.html#test_fluency"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project4_test.test_fluency" title="Permalink to this definition"></a></dt>
+<dd><p>Test the fluency of the program.</p>
+<p>This test checks if the program runs smoothly through various game sequences and does
+not break until the user quits.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mocker</strong> (<em>object</em>) – An object for creating patches in pytest.</p></li>
+<li><p><strong>capfd</strong> (<em>object</em>) – Captures the stdout and stderr.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project4_test.test_game_correctness">
+<span class="sig-prename descclassname"><span class="pre">project4_test.</span></span><span class="sig-name descname"><span class="pre">test_game_correctness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mocker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capfd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project4_test.html#test_game_correctness"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project4_test.test_game_correctness" title="Permalink to this definition"></a></dt>
+<dd><p>Test if the program correctly picks and runs the chosen game.</p>
+<p>This test function mocks the input and random seed to control the flow of <cite>project4</cite>. It
+checks if the game correctly picks the QuizGame and processes the answers correctly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mocker</strong> (<em>object</em>) – An object for creating patches in pytest.</p></li>
+<li><p><strong>capfd</strong> (<em>object</em>) – Captures the stdout and stderr.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="project4_test.test_input">
+<span class="sig-prename descclassname"><span class="pre">project4_test.</span></span><span class="sig-name descname"><span class="pre">test_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mocker</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">monkeypatch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project4_test.html#test_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project4_test.test_input" title="Permalink to this definition"></a></dt>
+<dd><p>Test if the program asks the correct guiding question to the user.</p>
+<p>This test function mocks the input for the main game menu in <cite>project4</cite>. It checks
+if the game prompts the user with the correct question when choosing a game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mocker</strong> (<em>object</em>) – An object for creating patches in pytest.</p></li>
+<li><p><strong>monkeypatch</strong> (<em>object</em>) – A utility to conveniently modify or override classes and functions during testing.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../project3/index.html" class="btn btn-neutral float-left" title="Project 3 Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Michal Borek.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

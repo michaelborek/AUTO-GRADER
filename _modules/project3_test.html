@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>project3_test &mdash; AUTO-GRADER 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AUTO-GRADER
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../project1/index.html">Project 1 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project2/index.html">Project 2 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project3/index.html">Project 3 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project4/index.html">Project 4 Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AUTO-GRADER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">project3_test</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for project3_test</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">project3</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+
+<div class="viewcode-block" id="MockRandomQuestions"><a class="viewcode-back" href="../project3/index.html#project3_test.MockRandomQuestions">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">MockRandomQuestions</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A utility data class for mocking random questions during testing.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    test_question_1 : int</span>
+<span class="sd">        A predetermined random question.</span>
+<span class="sd">    test_question_2 : int</span>
+<span class="sd">        Another predetermined random question.</span>
+<span class="sd">    test_question_3 : int</span>
+<span class="sd">        Another predetermined random question.</span>
+<span class="sd">    test_question_4 : int</span>
+<span class="sd">        Another predetermined random question.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">test_question_1</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">200</span>
+    <span class="n">test_question_2</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">300</span>
+    <span class="n">test_question_3</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">942</span>
+    <span class="n">test_question_4</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">942</span></div>
+
+<div class="viewcode-block" id="MockInput"><a class="viewcode-back" href="../project3/index.html#project3_test.MockInput">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">MockInput</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A utility data class for mocking user input during testing.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    test_input_1 : str</span>
+<span class="sd">        Mocked input.</span>
+<span class="sd">    test_input_2 : str</span>
+<span class="sd">        Another mocked input.</span>
+<span class="sd">    test_input_3 : str</span>
+<span class="sd">        Another mocked input.</span>
+<span class="sd">    test_input_4 : str</span>
+<span class="sd">        Another mocked input.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">test_input_1</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+    <span class="n">test_input_2</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+    <span class="n">test_input_3</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+    <span class="n">test_input_4</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;5&#39;</span></div>
+
+<div class="viewcode-block" id="MockSeed"><a class="viewcode-back" href="../project3/index.html#project3_test.MockSeed">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">MockSeed</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A utility data class for mocking random seeds during testing.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    test_seed_1 : int</span>
+<span class="sd">        Mocked seed value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">test_seed_1</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">200</span></div>
+
+<span class="c1"># Test 1: Checks if computer guesses are random (not hard-coded)</span>
+<div class="viewcode-block" id="test_computer_guess"><a class="viewcode-back" href="../project3/index.html#project3_test.test_computer_guess">[docs]</a><span class="k">def</span> <span class="nf">test_computer_guess</span><span class="p">(</span><span class="n">mocker</span><span class="p">,</span> <span class="n">capfd</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Test the Quiz game&#39;s workflow and correctness from `project3.py`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mocker : fixture</span>
+<span class="sd">        A pytest fixture for mocking. Used to mock `input` and `random.randint`.</span>
+<span class="sd">    capfd : fixture</span>
+<span class="sd">        A pytest fixture to capture stdout and stderr.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mock_random_questions</span> <span class="o">=</span> <span class="n">MockRandomQuestions</span><span class="p">()</span>  <span class="c1"># Creates an instance of the MockRandomQuestions class</span>
+    <span class="n">mock_input</span> <span class="o">=</span> <span class="n">MockInput</span><span class="p">()</span>  <span class="c1"># Creates an instance of the MockInput class</span>
+
+    <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project3.random.randint&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">mock_random_questions</span><span class="o">.</span><span class="n">test_question_1</span><span class="p">)</span>
+    <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project3.input&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">mock_input</span><span class="o">.</span><span class="n">test_input_1</span><span class="p">)</span>
+    <span class="n">project3</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+    <span class="n">out</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">capfd</span><span class="o">.</span><span class="n">readouterr</span><span class="p">()</span>
+    <span class="n">question1</span> <span class="o">=</span> <span class="n">out</span><span class="p">[:</span><span class="mi">15</span><span class="p">]</span>
+    
+    <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project3.random.randint&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">mock_random_questions</span><span class="o">.</span><span class="n">test_question_2</span><span class="p">)</span>
+    <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project3.input&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">mock_input</span><span class="o">.</span><span class="n">test_input_2</span><span class="p">)</span>
+    <span class="n">project3</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+    <span class="n">out</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">capfd</span><span class="o">.</span><span class="n">readouterr</span><span class="p">()</span>
+    <span class="n">question2</span> <span class="o">=</span> <span class="n">out</span><span class="p">[:</span><span class="mi">15</span><span class="p">]</span>
+    
+    <span class="k">assert</span> <span class="n">question1</span> <span class="o">!=</span> <span class="n">question2</span>
+
+    <span class="c1"># Checks if program prints appropriate messages</span>
+    <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project3.random.randint&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">mock_random_questions</span><span class="o">.</span><span class="n">test_question_3</span><span class="p">)</span>
+    <span class="n">project3</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+
+    <span class="n">out</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">capfd</span><span class="o">.</span><span class="n">readouterr</span><span class="p">()</span>
+
+    <span class="c1"># Checks if program print all of the required messages</span>
+    <span class="k">assert</span> <span class="s1">&#39;was the answer you selected&#39;</span> <span class="ow">in</span> <span class="n">out</span> 
+    <span class="k">assert</span> <span class="s1">&#39;Coming in at&#39;</span> <span class="ow">in</span> <span class="n">out</span>
+    <span class="k">assert</span> <span class="s1">&#39;You are correct!&#39;</span> <span class="ow">in</span> <span class="n">out</span> <span class="ow">or</span> <span class="s1">&#39;You are incorrect.&#39;</span> <span class="ow">in</span> <span class="n">out</span>
+    <span class="k">assert</span> <span class="s1">&#39;The correct answer is&#39;</span> <span class="ow">in</span> <span class="n">out</span>
+    <span class="k">assert</span> <span class="s1">&#39;with a&#39;</span> <span class="ow">in</span> <span class="n">out</span> </div>
+
+<div class="viewcode-block" id="test_random_shuffle"><a class="viewcode-back" href="../project3/index.html#project3_test.test_random_shuffle">[docs]</a><span class="k">def</span> <span class="nf">test_random_shuffle</span><span class="p">(</span><span class="n">mocker</span><span class="p">,</span> <span class="n">capfd</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Test to check if the game shuffles the answers correctly.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mocker : fixture</span>
+<span class="sd">        A pytest fixture for mocking. Used to mock `input` and `random.randint`.</span>
+<span class="sd">    capfd : fixture</span>
+<span class="sd">        A pytest fixture to capture stdout and stderr.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mock_input</span> <span class="o">=</span> <span class="n">MockInput</span><span class="p">()</span> <span class="c1"># Creates an instance of the MockInput class</span>
+    <span class="n">mock_seed</span> <span class="o">=</span> <span class="n">MockSeed</span><span class="p">()</span> <span class="c1"># Creates an instance of the MockSeed class</span>
+    <span class="n">mock_random_questions</span> <span class="o">=</span> <span class="n">MockRandomQuestions</span><span class="p">()</span> <span class="c1"># Creates an instance of the MockRandomQuestions class</span>
+
+    <span class="c1"># Checks if user correctly shuffled list where correct answer is not at the first position</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">mock_seed</span><span class="o">.</span><span class="n">test_seed_1</span><span class="p">)</span>
+    <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project3.random.randint&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">mock_random_questions</span><span class="o">.</span><span class="n">test_question_4</span><span class="p">)</span>
+    <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project3.input&#39;</span><span class="p">,</span> <span class="n">side_effect</span><span class="o">=</span><span class="n">mock_input</span><span class="o">.</span><span class="n">test_input_4</span><span class="p">)</span>
+    <span class="n">project3</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+    <span class="n">out</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">capfd</span><span class="o">.</span><span class="n">readouterr</span><span class="p">()</span>
+
+    <span class="k">assert</span> <span class="s1">&#39;You are correct!&#39;</span> <span class="ow">in</span> <span class="n">out</span>
+    <span class="k">assert</span> <span class="s1">&#39;The correct answer is High Heels with a 45 %.&#39;</span> <span class="ow">in</span> <span class="n">out</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Michal Borek.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>project3 &mdash; AUTO-GRADER 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AUTO-GRADER
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../project1/index.html">Project 1 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project2/index.html">Project 2 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project3/index.html">Project 3 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project4/index.html">Project 4 Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AUTO-GRADER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">project3</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for project3</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<div class="viewcode-block" id="GamesRules"><a class="viewcode-back" href="../project3/index.html#project3.GamesRules">[docs]</a><span class="k">class</span> <span class="nc">GamesRules</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents a game rule set with a randomly determined integer value.</span>
+
+<span class="sd">    This class initializes a random number from a predefined interval, which can be </span>
+<span class="sd">    used in the gameplay or game&#39;s logic.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    rand_int : int</span>
+<span class="sd">        A random number chosen from the interval [1, 1049].</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    __init__():</span>
+<span class="sd">        Initialize a new instance, generating a random integer for gameplay.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructs a new GamesRules instance and sets a random integer value for gameplay.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rand_int</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1049</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../project3/index.html#project3.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Implements the logic of the QuizGame.</span>
+
+<span class="sd">    The game reads a question bank from a data file, where each question has multiple answers with </span>
+<span class="sd">    their respective percentages. The computer randomly selects a question from the bank. The player </span>
+<span class="sd">    is then presented with five answers in a random order and has to pick one. The game provides </span>
+<span class="sd">    feedback, indicating whether the player selected the most popular answer and its percentage.</span>
+
+<span class="sd">    The game uses the `random.randint` function from the `random` module to select a random question </span>
+<span class="sd">    from the question bank.</span>
+
+<span class="sd">    It also uses the built-in `open` function to read the data file.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    None</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    ----------------</span>
+<span class="sd">    The game prompts the user to select an answer between 1 and 5, where each number corresponds to </span>
+<span class="sd">    a different answer option.</span>
+
+<span class="sd">    Depending on the player&#39;s choice and the popularity of the selected answer, the game will announce the results:</span>
+<span class="sd">    - &#39;You are correct&#39; if the player&#39;s choice has the highest percentage.</span>
+<span class="sd">    - &#39;You are incorrect&#39; if the player&#39;s choice doesn&#39;t have the highest percentage.</span>
+
+<span class="sd">    Caution</span>
+<span class="sd">    ----------------</span>
+<span class="sd">    The game interacts with a data file &#39;data.txt&#39; which is expected to be in the same directory. This </span>
+<span class="sd">    file is assumed to contain a bank of questions, with each question having multiple answers, </span>
+<span class="sd">    each with their respective popularity percentage. Each question and its answers are expected </span>
+<span class="sd">    to be on a new line in the data file.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">games_rules</span> <span class="o">=</span> <span class="n">GamesRules</span><span class="p">()</span>  <span class="c1"># Creates an instance of the GamesRules class</span>
+
+    <span class="c1"># Reads the data file</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>  <span class="c1"># Reads all lines at once</span>
+
+    <span class="n">quiz_row</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="n">games_rules</span><span class="o">.</span><span class="n">rand_int</span><span class="p">]</span>  <span class="c1"># Directly accesses the required line</span>
+
+    <span class="n">question</span> <span class="o">=</span> <span class="n">quiz_row</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># Splits file</span>
+    <span class="n">question</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">question</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># Replaces last element&#39;s \n</span>
+
+    <span class="n">correct_answer</span> <span class="o">=</span> <span class="n">question</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Correct answer</span>
+    <span class="n">answer_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">question</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>  <span class="c1"># Adds answers to the list/ skips percentage</span>
+
+    <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">answer_list</span><span class="p">)</span>  <span class="c1"># Shuffles list</span>
+
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">question</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Prints a question</span>
+    <span class="nb">print</span><span class="p">()</span>
+
+    <span class="c1"># Prints nice answers table</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">answer</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">answer_list</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">  </span><span class="si">{</span><span class="n">answer</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your guess: &#39;</span><span class="p">))</span>  <span class="c1"># Asks for number</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">answer_list</span><span class="p">[</span><span class="n">guess</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1"> was the answer you selected.&#39;</span><span class="p">)</span>  <span class="c1"># Prints text</span>
+    <span class="n">index_of_answer</span> <span class="o">=</span> <span class="n">question</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">answer_list</span><span class="p">[</span><span class="n">guess</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># Gets the index of the chosen number to find its percentage</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Coming in at </span><span class="si">{</span><span class="n">question</span><span class="p">[</span><span class="n">index_of_answer</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1"> %!&#39;</span><span class="p">)</span>  <span class="c1"># Prints text</span>
+
+    <span class="c1"># Logic for correct/incorrect</span>
+    <span class="k">if</span> <span class="n">answer_list</span><span class="p">[</span><span class="n">guess</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">correct_answer</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You are correct!&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You are incorrect.&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Prints last text</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The correct answer is </span><span class="si">{</span><span class="n">correct_answer</span><span class="si">}</span><span class="s1"> with a </span><span class="si">{</span><span class="n">question</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s1"> %.&#39;</span><span class="p">)</span></div>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Michal Borek.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>project2_test &mdash; AUTO-GRADER 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AUTO-GRADER
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../project1/index.html">Project 1 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project2/index.html">Project 2 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project3/index.html">Project 3 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project4/index.html">Project 4 Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AUTO-GRADER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">project2_test</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for project2_test</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">project2</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+
+<div class="viewcode-block" id="MockInput"><a class="viewcode-back" href="../project2/index.html#project2_test.MockInput">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">MockInput</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A utility data class for mocking user input during testing.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    test_some_input : str</span>
+<span class="sd">        Test case where player picks rock.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">test_some_input</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>  <span class="c1"># Test case where player picks rock</span></div>
+
+<div class="viewcode-block" id="test_randomness_of_computer_guess"><a class="viewcode-back" href="../project2/index.html#project2_test.test_randomness_of_computer_guess">[docs]</a><span class="k">def</span> <span class="nf">test_randomness_of_computer_guess</span><span class="p">(</span><span class="n">mocker</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test the randomness of computer&#39;s guess by checking a set of 1000 guesses.&quot;&quot;&quot;</span>
+    
+    <span class="n">Mock_Input</span> <span class="o">=</span> <span class="n">MockInput</span><span class="p">()</span>
+
+    <span class="n">guesses</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project2.input&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">Mock_Input</span><span class="o">.</span><span class="n">test_some_input</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+        <span class="n">game</span> <span class="o">=</span> <span class="n">project2</span><span class="o">.</span><span class="n">GamesRules</span><span class="p">()</span>
+        <span class="n">guesses</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">game</span><span class="o">.</span><span class="n">computer_guess</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">guesses</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span></div>
+
+<div class="viewcode-block" id="test_game_logic"><a class="viewcode-back" href="../project2/index.html#project2_test.test_game_logic">[docs]</a><span class="k">def</span> <span class="nf">test_game_logic</span><span class="p">(</span><span class="n">mocker</span><span class="p">,</span> <span class="n">capfd</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test the game logic based on RPSLS rules.</span>
+<span class="sd">    </span>
+<span class="sd">    The function patches the input and random.randint functions from project2 </span>
+<span class="sd">    and checks the game&#39;s logic for certain matchups.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">matchups</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>  <span class="c1"># Rock wins</span>
+        <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>  <span class="c1"># Paper wins</span>
+        <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>  <span class="c1"># Scissors wins</span>
+        <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>  <span class="c1"># Lizard wins</span>
+        <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>   <span class="c1"># Spock wins</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">player</span><span class="p">,</span> <span class="n">computer</span> <span class="ow">in</span> <span class="n">matchups</span><span class="p">:</span>
+        <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project2.input&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">player</span><span class="p">))</span>
+        <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project2.random.randint&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">computer</span><span class="p">)</span>
+        <span class="n">project2</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+        
+        <span class="n">out</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">capfd</span><span class="o">.</span><span class="n">readouterr</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="s1">&#39;You win&#39;</span> <span class="ow">in</span> <span class="n">out</span></div>
+
+<div class="viewcode-block" id="test_game_output_messages"><a class="viewcode-back" href="../project2/index.html#project2_test.test_game_output_messages">[docs]</a><span class="k">def</span> <span class="nf">test_game_output_messages</span><span class="p">(</span><span class="n">mocker</span><span class="p">,</span> <span class="n">capfd</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test the game&#39;s output messages for various game outcomes.</span>
+
+<span class="sd">    The function patches the input and random.randint functions from project2 </span>
+<span class="sd">    and checks the game&#39;s output messages for each matchup in test_data.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mocker : object</span>
+<span class="sd">        The mock object used to replace real functions or methods with mock calls.</span>
+<span class="sd">    capfd : object</span>
+<span class="sd">        Capture, as text, output to file descriptors 1 and 2.</span>
+<span class="sd">        </span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The test checks if both the computer&#39;s move and the game outcome message </span>
+<span class="sd">    are correctly printed to the console.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">test_data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;I guessed scissors&#39;</span><span class="p">,</span> <span class="s1">&#39;You win because rock crushes scissors&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;I guessed lizard&#39;</span><span class="p">,</span> <span class="s1">&#39;You win because rock crushes lizard&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;I guessed rock&#39;</span><span class="p">,</span><span class="s1">&#39;Tie! We both guessed rock&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;I guessed paper&#39;</span><span class="p">,</span> <span class="s1">&#39;You win because scissors cuts paper&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;I guessed lizard&#39;</span><span class="p">,</span> <span class="s1">&#39;You win because scissors decapitates lizard&#39;</span><span class="p">)</span>
+        <span class="c1"># Add other combinations as needed</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">player</span><span class="p">,</span> <span class="n">computer</span><span class="p">,</span> <span class="n">computer_message</span><span class="p">,</span> <span class="n">outcome_message</span> <span class="ow">in</span> <span class="n">test_data</span><span class="p">:</span>
+        <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project2.input&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">player</span><span class="p">))</span>
+        <span class="n">mocker</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;project2.random.randint&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="n">computer</span><span class="p">)</span>
+        
+        <span class="n">project2</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+        
+        <span class="n">out</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">capfd</span><span class="o">.</span><span class="n">readouterr</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">computer_message</span> <span class="ow">in</span> <span class="n">out</span>
+        <span class="k">assert</span> <span class="n">outcome_message</span> <span class="ow">in</span> <span class="n">out</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Michal Borek.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

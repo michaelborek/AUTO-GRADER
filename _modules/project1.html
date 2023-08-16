@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>project1 &mdash; AUTO-GRADER 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            AUTO-GRADER
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../project1/index.html">Project 1 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project2/index.html">Project 2 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project3/index.html">Project 3 Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project4/index.html">Project 4 Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AUTO-GRADER</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Module code</a></li>
+      <li class="breadcrumb-item active">project1</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for project1</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<div class="viewcode-block" id="GamesRules"><a class="viewcode-back" href="../project1/index.html#project1.GamesRules">[docs]</a><span class="k">class</span> <span class="nc">GamesRules</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents the game&#39;s rule set with a randomly generated secret number.</span>
+
+<span class="sd">    This class provides a defined number of maximum guesses allowed and </span>
+<span class="sd">    randomly determines a secret number for gameplay.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    maximum_guesses : int</span>
+<span class="sd">        The maximum number of allowed guesses.</span>
+<span class="sd">    secret_number : int</span>
+<span class="sd">        A randomly generated number between 0 and 99 that the player has to guess.</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    __init__():</span>
+<span class="sd">        Initialize a new instance, generating a secret number for gameplay.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">maximum_guesses</span> <span class="o">=</span> <span class="mi">6</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructs a new GamesRules instance and sets the secret number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">secret_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../project1/index.html#project1.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Implements the logic of the NumGame.</span>
+
+<span class="sd">    In this game, the player is asked to guess a secret number that is randomly selected </span>
+<span class="sd">    between 0 and 99 (inclusive). For each guess made by the player, the game provides feedback, </span>
+<span class="sd">    informing the player if the secret number is &#39;Higher&#39; or &#39;Lower&#39; than the number guessed.</span>
+
+<span class="sd">    The player is allowed a maximum of 6 guesses to identify the secret number. The game ends </span>
+<span class="sd">    either when the player has successfully guessed the secret number or when the player has </span>
+<span class="sd">    exhausted all of their available guesses.</span>
+
+<span class="sd">    The game uses the `random.randint` function from the `random` module to generate the secret number.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    None</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    ----------------</span>
+<span class="sd">    Asks the user to guess a number between 0 and 99.</span>
+
+<span class="sd">    If the guessed number is less than the secret number, it prints &#39;Higher&#39; and the number of remaining guesses.</span>
+<span class="sd">    If the guessed number is greater than the secret number, it prints &#39;Lower&#39; and the number of remaining guesses.</span>
+<span class="sd">    If the guessed number is equal to the secret number, it prints &#39;Correct&#39; and the game ends.</span>
+
+<span class="sd">    If all guesses are exhausted, it reveals the secret number and ends the game.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">games_rules</span> <span class="o">=</span> <span class="n">GamesRules</span><span class="p">()</span> <span class="c1"># Creates an instance of the GamesRules class</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Guess a number between 0 and 99&#39;</span><span class="p">)</span> <span class="c1"># Asks the user to guess a number between 0 and 99</span>
+
+    <span class="n">guess_counter</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Counter for number of guesses</span>
+
+    <span class="c1"># While loop to check if the player&#39;s guess is higher, lower or equal to the secret number</span>
+    <span class="k">while</span> <span class="n">guess_counter</span> <span class="o">&lt;=</span> <span class="n">games_rules</span><span class="o">.</span><span class="n">maximum_guesses</span><span class="p">:</span>
+        <span class="n">player_guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your guess? &#39;</span><span class="p">)</span> <span class="c1"># Asks the user for their guess</span>
+        <span class="n">player_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">player_guess</span><span class="p">)</span> <span class="c1"># Converts the player&#39;s guess to an integer</span>
+
+        <span class="c1"># If-else statements to check if the player&#39;s guess is higher, lower or equal to the secret number</span>
+        <span class="k">if</span> <span class="n">player_number</span> <span class="o">&lt;</span> <span class="n">games_rules</span><span class="o">.</span><span class="n">secret_number</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Higher&#39;</span><span class="p">)</span> <span class="c1"># Prints &#39;Higher&#39; if the player&#39;s guess is lower than the secret number</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You have </span><span class="si">{</span><span class="n">games_rules</span><span class="o">.</span><span class="n">maximum_guesses</span><span class="o">-</span><span class="n">guess_counter</span><span class="si">}</span><span class="s1"> number of guesses.&#39;</span><span class="p">)</span> <span class="c1"># Prints the number of remaining guesses</span>
+            <span class="n">guess_counter</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Increments the guess counter by 1</span>
+        <span class="k">elif</span> <span class="n">player_number</span> <span class="o">&gt;</span> <span class="n">games_rules</span><span class="o">.</span><span class="n">secret_number</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Lower&#39;</span><span class="p">)</span> <span class="c1"># Prints &#39;Lower&#39; if the player&#39;s guess is higher than the secret number</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You have </span><span class="si">{</span><span class="n">games_rules</span><span class="o">.</span><span class="n">maximum_guesses</span><span class="o">-</span><span class="n">guess_counter</span><span class="si">}</span><span class="s1"> number of guesses.&#39;</span><span class="p">)</span> <span class="c1"># Prints the number of remaining guesses</span>
+            <span class="n">guess_counter</span> <span class="o">+=</span><span class="mi">1</span> <span class="c1"># Increments the guess counter by 1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Correct&#39;</span><span class="p">)</span> <span class="c1"># Prints &#39;Correct&#39; if the player&#39;s guess is equal to the secret number</span>
+            <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You lost&#39;</span><span class="p">)</span> <span class="c1"># Prints &#39;You lost&#39; if the player exhausts all available guesses</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Secret number was&#39;</span><span class="p">,</span> <span class="n">games_rules</span><span class="o">.</span><span class="n">secret_number</span><span class="p">)</span> <span class="c1"># Prints the secret number</span></div>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Michal Borek.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
