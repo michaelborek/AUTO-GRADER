@@ -51,7 +51,7 @@ pytest project<number_of_the_test>_test.py
 ### Example Code Assignments
 The following are example code assignments included in the repository:
 
-NumGame (project1.py): A game where the player guesses numbers.
+- NumGame (project1.py): A game where the player guesses numbers.
 - RPSLS (project2.py): Rock-Paper-Scissors-Lizard-Spock game implementation.
 - GuessingGame (project3.py): A classic guessing game with a twist.
 - Combined Game (project4.py): A combination of the aforementioned games for advanced challenges.
