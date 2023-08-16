@@ -55,8 +55,9 @@ NumGame (project1.py): A game where the player guesses numbers.
 - RPSLS (project2.py): Rock-Paper-Scissors-Lizard-Spock game implementation.
 - GuessingGame (project3.py): A classic guessing game with a twist.
 - Combined Game (project4.py): A combination of the aforementioned games for advanced challenges.
-- Contributing
-- Contributions, issues, and feature requests are welcome! Feel free to check [issue pages](https://github.com/michaelborek/AUTO-GRADER/issues) for open issues or to create a new one.
+
+### Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check [issue pages](https://github.com/michaelborek/AUTO-GRADER/issues) for open issues or to create a new one.
 
 ### License
 Distributed under the MIT License. See LICENSE for more information.
